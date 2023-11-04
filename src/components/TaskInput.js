@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import BuildList from "./BuildList.js";
 
 function TaskInput(){
     //input bar --> sends value to var to  Buildlist
@@ -23,6 +24,10 @@ function TaskInput(){
         <form onSubmit={submitInput}>
             <input type="text" class="form-control" placeholder="Enter task" value={input} onChange={(e) => setInput(e.target.value)} />
         </form>
+
+       
+
+            <BuildList inputData = {input} />
     
         </>
 
