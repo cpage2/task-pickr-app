@@ -7,17 +7,25 @@ function TaskInput(){
    
     const [input, setInput] = useState("");
     
-    let inputValue = "";
+    
+    
     function submitInput(e){
         
         e.preventDefault(); //stops page from reloading
-        inputValue = input;
+      
         setInput(""); //reset input value
-        // console.log(inputValue);
+       
+
+
+        
     }
 
+  
+        
+    
 
 
+     
 
     return(
         <>
@@ -25,9 +33,16 @@ function TaskInput(){
             <input type="text" class="form-control" placeholder="Enter task" value={input} onChange={(e) => setInput(e.target.value)} />
         </form>
 
+         
+
+       
+          <BuildList inputData = {input} /> 
+
+        
+
        
 
-            <BuildList inputData = {input} />
+          
     
         </>
 

@@ -5,24 +5,50 @@ import { useState } from "react";
 
 
 function BuildList({inputData}){
-    const[listItem, setListItem] = useState("");
 
-    function listCreation(){
+    let task = []
+
+    task.push(inputData);
+   
+    const[listItem, setListItem] = useState(
+        {
+            id: '',
+            chBox: '',
+            taskText: '',
+            editButton: ''
+            
+        }
+    
+    );
+
+    const l = task.map(item => <li>{item}</li>);
+
+    function create(){
+        
+    }
+    
+   
+
+   
         //take checkbox, input, and edit button and create list item with unique id
         /**
          * create label
          * create list item (document.createElement('li'))
          */
+
+        
+
+        
         
 
 
-    }
+    
 
     return(
         <>
-            <ul>
-                {listCreation()}
-            </ul>
+            {/* <p>{inputData}</p> */}
+
+            <ul>{l}</ul>
         
         
         </>

@@ -13,7 +13,7 @@ function TaskList(){
 
          <div className="tasksWinput">
             <TaskInput/>
-            <BuildList/>
+            {/* <BuildList/> */}
          </div>
         
     
