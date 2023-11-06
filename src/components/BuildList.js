@@ -1,4 +1,5 @@
 import React from "react";
+import chBoxFalse from "./assets/Unchecked.png";
 import Checkbox from "./Checkbox.js";
 import EditButton from "./EditButton.js";
 import { useState } from "react";
@@ -17,7 +18,11 @@ function BuildList(){
        
         setTodos([
             ...todos,
-            {text: input} //id , checkbox, text, edit
+            {   id: Math.floor(Math.random()*50),
+                text: input,
+                checkbox:chBoxFalse
+
+            } //id , checkbox, text, edit
         ]);
        
         setInput(""); //reset input value
@@ -39,9 +44,10 @@ function BuildList(){
                         
                         
                             <ul>
-                            {todos.map(task => (<li>{"t: " + task.text}</li>))}
+                            {todos.map(task => (<li id={task.id}><img id={"cb"+task.id} src={task.checkbox} style={{width:'20px'}}/> {task.text}</li>))}
                             
                             </ul>
+                            
                 </div>
             
 
