@@ -1,8 +1,8 @@
 import "./TaskPickr.css";
 import React from "react";
-import TaskList from "./components/TaskList.js";
 import Picker from "./components/Picker.js";
 import logo from "./components/assets/Logo.png";
+import BuildList from "./components/BuildList.js";
 
 
 
@@ -19,7 +19,7 @@ function TPMain (){
         
         <div class="container text-center">
             <div class="row">
-                <div class="col"><TaskList/></div>
+                <div class="col"><BuildList/></div>
                 <div class="col"><Picker/></div>
             </div>
         </div>

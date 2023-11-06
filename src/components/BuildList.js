@@ -4,56 +4,53 @@ import EditButton from "./EditButton.js";
 import { useState } from "react";
 
 
-function BuildList({inputData}){
+function BuildList(){
 
-    let task = []
-
-    task.push(inputData);
-   
-    const[listItem, setListItem] = useState(
-        {
-            id: '',
-            chBox: '',
-            taskText: '',
-            editButton: ''
-            
-        }
+    const [input, setInput] = useState("");
+    const [todos, setTodos] = useState([]);
     
-    );
-
-    const l = task.map(item => <li>{item}</li>);
-
-    function create(){
+  
+    
+    function submitInput(e){
+        
+        e.preventDefault(); //stops page from reloading
+       
+        setTodos([
+            ...todos,
+            {text: input} //id , checkbox, text, edit
+        ]);
+       
+        setInput(""); //reset input value
         
     }
-    
-   
 
-   
-        //take checkbox, input, and edit button and create list item with unique id
-        /**
-         * create label
-         * create list item (document.createElement('li'))
-         */
-
-        
-
-        
-        
-
-
-    
-
+ 
     return(
         <>
-            {/* <p>{inputData}</p> */}
+                <div id= "taskName"><p>Tasks:</p></div>
 
-            <ul>{l}</ul>
-        
-        
+                <div className="inputWList">
+
+                        <form onSubmit={submitInput}>
+                            <input type="text" class="form-control" placeholder="Enter task" value={input}
+                            onChange ={(e) => {setInput(e.target.value) }}/>
+                        </form>
+                    
+                        
+                        
+                            <ul>
+                            {todos.map(task => (<li>{"t: " + task.text}</li>))}
+                            
+                            </ul>
+                </div>
+            
+
         </>
-    );
 
+
+
+    );
+   
 
 }
 
