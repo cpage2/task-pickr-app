@@ -5,14 +5,14 @@ import { useState } from "react";
 
 
 
-function Checkbox(){
+function Checkbox(prop){
     //start uncheck state
     const [chBox, setChBox] = useState(chBoxFalse);
 
 
    
           return   <img src ={chBox} alt="checkbox" style={{width: '20px'}} onClick={
-            ()=> setChBox(chBoxTrue)
+            ()=> {setChBox(chBoxTrue); }
           }/>;
         
         
