@@ -20,7 +20,7 @@ function BuildList(){
             ...todos,
             {   id: Math.floor(Math.random()*50),
                 text: input,
-                checkbox:chBoxFalse
+                checkbox: ""
 
             } //id , checkbox, text, edit
         ]);
@@ -44,7 +44,7 @@ function BuildList(){
                         
                         
                             <ul>
-                            {todos.map(task => (<li id={task.id}><img id={"cb"+task.id} src={task.checkbox} style={{width:'20px'}}/> {task.text}</li>))}
+                            {todos.map(task => (<li id={task.id}><Checkbox/> {task.text}</li>))}
                             
                             </ul>
                             

@@ -10,13 +10,13 @@ function Checkbox(){
     const [chBox, setChBox] = useState(chBoxFalse);
 
 
-    return(
-        <>
-             <img src ={chBoxFalse} alt="checkbox"/>
+   
+          return   <img src ={chBox} alt="checkbox" style={{width: '20px'}} onClick={
+            ()=> setChBox(chBoxTrue)
+          }/>;
         
         
-        </>
-    );
+ 
 
 }
 
