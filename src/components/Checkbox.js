@@ -8,15 +8,22 @@ import { useState } from "react";
 function Checkbox(prop){
     //start uncheck state
     const [chBox, setChBox] = useState(chBoxFalse);
+  
 
 
    
-          return   <img src ={chBox} alt="checkbox" style={{width: '20px'}} onClick={
-            ()=> {setChBox(chBoxTrue); }
+          return   <img src ={chBox} alt="checkbox" style={{width: '20px'}} id={prop.idNum} onClick={
+            ()=> {setChBox(chBoxTrue); ;}
           }/>;
         
         
- 
+  /**
+   *   function handleRemove(id) {
+          const newList = list.filter((item) => item.id !== id);
+
+          setList(newList);
+  }
+   */
 
 }
 
