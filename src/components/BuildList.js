@@ -47,7 +47,13 @@ function BuildList(){
                                 
                             {todos.map(task => (
                                 <li key={task.id}>
-                                    <input type="checkbox" id={task.id} onChange={(e) => { if(e.target.checked === true){setTodos(todos.filter(item => item.id !== e.target.id))}}}></input>
+                                    <input type="checkbox" id={task.id} onClick={(e) => { 
+                                        if(e.target.checked === true){
+                                            setTimeout(() => {
+                                                setTodos(todos.filter(item => item.id !== e.target.id))
+
+                                            },1000)
+                                        }}}></input>
                                     {task.text}
                                 </li>
                             ))}
