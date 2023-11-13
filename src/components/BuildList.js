@@ -7,18 +7,19 @@ function BuildList(){
 
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
-    
+   
   
     function submitInput(e){
         
         e.preventDefault(); //stops page from reloading
+        
        
         setTodos([
             ...todos,
-            {   id: "TD1" + Math.floor(Math.random()*50),
-                text: input,
-                
- 
+           // Change id because duplicates can happen
+            {   id: "TD" + Math.floor(Math.random()*50),
+                text: input
+             
             } 
         ]);
        
@@ -27,13 +28,14 @@ function BuildList(){
     }
 
     function editText(e){
-        //input popup
-        //take id text value and replace it
-        //update list
-        
-
-        let newText = prompt("edit text", e.target.value);
        
+        for(let i =0; i < todos.length; i++){
+            if(todos[i].id === e.target.id){
+                let newText = prompt("Edit", todos[i].text);
+                todos[i].text = newText;
+            }
+        }
+        setTodos([...todos]);
 
     }
 
