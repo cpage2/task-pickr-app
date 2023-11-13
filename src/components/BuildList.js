@@ -43,12 +43,11 @@ function BuildList(){
                         </form>
                     
                         
-                        
                             <ul>
                                 
                             {todos.map(task => (
                                 <li key={task.id}>
-                                    <input type="checkbox" id={task.id} value={task.check} onChange={(e) => { if(e.target.checked === true){setTodos(todos.filter(item => item.id !== e.target.id))}}}></input>
+                                    <input type="checkbox" id={task.id} onChange={(e) => { if(e.target.checked === true){setTodos(todos.filter(item => item.id !== e.target.id))}}}></input>
                                     {task.text}
                                 </li>
                             ))}
