@@ -6,7 +6,7 @@ function BuildList(){
 
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
-    const [check, setCheck] = useState("unchecked");
+    
   
     function submitInput(e){
         
@@ -15,7 +15,8 @@ function BuildList(){
         setTodos([
             ...todos,
             {   id: "TD1" + Math.floor(Math.random()*50),
-                text: input
+                text: input,
+                
  
             } 
         ]);
@@ -24,12 +25,7 @@ function BuildList(){
         
     }
 
-    function removeLI(id){
-       
-        
-       
-     
-    }
+    
 
     
    
@@ -50,7 +46,12 @@ function BuildList(){
                         
                             <ul>
                                 
-                            {todos.map(task => (<li key={task.id}><input type="checkbox" id={"CB"+task.id} value={check}></input>{task.text}</li>))}
+                            {todos.map(task => (
+                                <li key={task.id}>
+                                    <input type="checkbox" id={task.id} value={task.check} onChange={(e) => { if(e.target.checked === true){setTodos(todos.filter(item => item.id !== e.target.id))}}}></input>
+                                    {task.text}
+                                </li>
+                            ))}
                           
                              
                             
