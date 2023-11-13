@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import editButton from "./assets/pencil.svg";
 
 
 function BuildList(){
@@ -25,10 +26,27 @@ function BuildList(){
         
     }
 
-    
+    function editText(e){
+        //input popup
+        //take id text value and replace it
+        //update list
+        
 
-    
-   
+        let newText = prompt("edit text", e.target.value);
+       
+
+    }
+
+    function deleteListItem(e){
+        if(e.target.checked === true){
+            setTimeout(() => {
+                setTodos(todos.filter(item => item.id !== e.target.id))
+
+            },1000)
+        }
+        
+    }
+
 
  
     return(
@@ -47,33 +65,22 @@ function BuildList(){
                                 
                             {todos.map(task => (
                                 <li key={task.id}>
-                                    <input type="checkbox" id={task.id} onClick={(e) => { 
-                                        if(e.target.checked === true){
-                                            setTimeout(() => {
-                                                setTodos(todos.filter(item => item.id !== e.target.id))
-
-                                            },1000)
-                                        }}}></input>
+                                    <input type="checkbox" id={task.id} onClick={deleteListItem}></input>
                                     {task.text}
+                                    <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
+
                                 </li>
                             ))}
-                          
-                             
-                            
+                           
                             </ul>
                            
-                            
                 </div>
-            
-
+        
         </>
-
-
 
     );
    
 
 }
-
 
 export default BuildList;
