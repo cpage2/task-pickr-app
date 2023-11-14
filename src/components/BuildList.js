@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import editButton from "./assets/pencil.svg";
+import Pickr from "./Picker.js";
 
 
 function BuildList(){
@@ -13,13 +14,11 @@ function BuildList(){
         
         e.preventDefault(); //stops page from reloading
         
-       
         setTodos([
             ...todos,
            // Change id because duplicates can happen
-            {   id: "TD" + Math.floor(Math.random()*50),
-                text: input
-             
+            {   id: "TD1" + Math.floor(Math.random()*50),
+                text: input          
             } 
         ]);
        
@@ -50,33 +49,36 @@ function BuildList(){
     }
 
 
- 
     return(
         <>
-                <div id= "taskName"><p>Tasks:</p></div>
+        <div className="col">
+                    <div id= "taskName"><p>Tasks:</p></div>
 
-                <div className="inputWList">
+                    <div className="inputWList">
 
-                        <form onSubmit={submitInput}>
-                            <input type="text" class="form-control" placeholder="Enter task" value={input}
-                            onChange ={(e) => {setInput(e.target.value) }}/>
-                        </form>
-                    
+                            <form onSubmit={submitInput}>
+                                <input type="text" class="form-control" placeholder="Enter task" value={input}
+                                onChange ={(e) => {setInput(e.target.value) }}/>
+                            </form>
                         
-                            <ul>
-                                
-                            {todos.map(task => (
-                                <li key={task.id}>
-                                    <input type="checkbox" id={task.id} onClick={deleteListItem}></input>
-                                    {task.text}
-                                    <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
+                            
+                                <ul>
+                                    
+                                {todos.map(task => (
+                                    <li key={task.id}>
+                                        <input type="checkbox" id={task.id} onClick={deleteListItem}></input>
+                                        {task.text}
+                                        <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
 
-                                </li>
-                            ))}
-                           
-                            </ul>
-                           
-                </div>
+                                    </li>
+                                ))}
+                            
+                                </ul>
+                
+                    </div>
+        </div>
+        <Pickr taskList = {todos}/>
+               
         
         </>
 
