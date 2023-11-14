@@ -54,7 +54,7 @@ function BuildList(){
         <>
         <div className="col">
                     <div id= "taskName"><p>Tasks:</p></div>
-
+                    
                     <div className="inputWList">
 
                             <form onSubmit={submitInput}>
@@ -65,18 +65,20 @@ function BuildList(){
                             
                                 <ul>
                                     
-                                {todos.map(task => (
-                                    <li key={task.id}>
-                                        <span id="cb-span">
-                                        <input type="checkbox" id={task.id} className="chBox" onClick={deleteListItem}></input>
-                                        <label htmlFor="chBox"></label>
-                                        </span>
-                                      
-                                        {task.text}
-                                        <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
+                                        {todos.map(task => (
+                                            <li key={task.id}>
+                                                
+                                                <label class="chBContainer">
+                                                    <input type="checkbox" id={task.id} onClick={deleteListItem}></input>
+                                                    <span className="checkmark"></span>
+                                                </label>
+                                            
+                                            
+                                                {task.text}
+                                                <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
 
-                                    </li>
-                                ))}
+                                            </li>
+                                        ))}
                             
                                 </ul>
                 

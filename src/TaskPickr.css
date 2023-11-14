@@ -15,32 +15,89 @@ body{
     margin-top: 20pt;
 }
 
+
 #taskName{
-    float: left;
-}
-
-.inputWList li{
-    list-style: none;
-}
-
-#cb-span *{
-    visibility: hidden;
-}
-
-input.chBox + label::after{
-  visibility: visible;
-  content: url("./components/assets/Unchecked.png");
-
+  float: left;
   
 }
 
-/* input#cb:checked + label::after {
-    content: " T ";
-    color: green;
-    background: red;
-  } */
+.inputWList li{
+  list-style: none;
+}
 
+.inputWList{
+  background-color: rgba(128, 128, 128, 0.598);
+  margin-top: 35px;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+}
 
+.chBContainer{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  
+}
+
+.chBContainer input{
+  position:absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+  
+ 
+}
+
+.checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 3px solid #edbd00;
+ 
+}
+
+.chBContainer:hover input ~ .checkmark {
+  background-color: #edbd00;
+}
+
+.chBContainer input:checked ~ .checkmark {
+  background-color: #edbd00;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.chBContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.chBContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: 3px solid #edbd00;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 
 
