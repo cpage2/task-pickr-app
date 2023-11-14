@@ -8,7 +8,7 @@ function BuildList(){
 
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
-   
+
   
     function submitInput(e){
         
@@ -17,7 +17,7 @@ function BuildList(){
         setTodos([
             ...todos,
            // Change id because duplicates can happen
-            {   id: "TD1" + Math.floor(Math.random()*50),
+            {   id: "TD1" + Math.floor(Math.random()*100),
                 text: input          
             } 
         ]);

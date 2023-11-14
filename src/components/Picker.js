@@ -6,7 +6,15 @@ function Picker(prop){
 
     function pickTask(){
         let index = Math.floor(Math.random()*prop.taskList.length);
-        setPick(prop.taskList[index].text);
+        if(prop.taskList.length > 1){
+            
+            setPick(prop.taskList[index].text);
+        }
+        else{
+            setPick("");
+        }
+        
+       
 
     }
 
