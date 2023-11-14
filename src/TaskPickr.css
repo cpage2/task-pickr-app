@@ -1,15 +1,44 @@
 
-
-
-/* Background */
 body{
-    /* background-image: url('images/bubbles.png');
-    background-repeat: no-repeat;
-     background-size: 120%;  */
+  background-image: url("/src/components/assets/Pencil\ pattern.png");
+  background-repeat: no-repeat;
+  background-size: 150%;
     
 }
 
+#logo{
+    margin-top: 10pt;
+    margin-left: 10pt;
+}
 
+.col{
+    margin-top: 20pt;
+}
+
+#taskName{
+    float: left;
+}
+
+.inputWList li{
+    list-style: none;
+}
+
+#cb-span *{
+    visibility: hidden;
+}
+
+input.chBox + label::after{
+  visibility: visible;
+  content: url("./components/assets/Unchecked.png");
+
+  
+}
+
+/* input#cb:checked + label::after {
+    content: " T ";
+    color: green;
+    background: red;
+  } */
 
 
 
@@ -17,44 +46,22 @@ body{
 
 /* Mobile */
 @media(min-width: 1000px) {
-    /* body{
-        background-size: 120% !important;
-    } */
+  
 
    
 }
 
 @media(min-width:800px) and (max-width: 992px) {
-    /* .col-md{
-        margin-bottom: 30px;
-    }
-
-    body{
-        background-size: 200%;
-    }
-
   
-
-    footer{
-        margin-top: 5%;
-       
-    } */
 
 }
 
 @media(max-width: 700px) {
-    /* .col-md{
-        margin-bottom: 5%;
-    } */
 
    
 }
 
 @media(max-width: 400px) {
-    /* body{
-        background-size: 500% !important;
-
-    }
-   */
+  
    
 }

@@ -8,6 +8,7 @@ function BuildList(){
 
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
+   
 
   
     function submitInput(e){
@@ -66,7 +67,11 @@ function BuildList(){
                                     
                                 {todos.map(task => (
                                     <li key={task.id}>
-                                        <input type="checkbox" id={task.id} onClick={deleteListItem}></input>
+                                        <span id="cb-span">
+                                        <input type="checkbox" id={task.id} className="chBox" onClick={deleteListItem}></input>
+                                        <label htmlFor="chBox"></label>
+                                        </span>
+                                      
                                         {task.text}
                                         <img src={editButton} alt="edit button" style={{width:"20px"}}  id={task.id} onClick={editText}/>
 
@@ -78,8 +83,7 @@ function BuildList(){
                     </div>
         </div>
         <Pickr taskList = {todos}/>
-               
-        
+ 
         </>
 
     );
