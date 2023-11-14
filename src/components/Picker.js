@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./PickrStyle.css";
 
 function Picker(prop){
     const [pick, setPick] = useState("");

@@ -1,3 +1,4 @@
+import "./BListStyle.css";
 import React from "react";
 import { useState } from "react";
 import editButton from "./assets/pencil.svg";
@@ -53,7 +54,9 @@ function BuildList(){
     return(
         <>
         <div className="col">
-                    <div id= "taskName"><p>Tasks:</p></div>
+
+                    
+                    <div className = "taskName"><p>Tasks:</p></div>
                     
                     <div className="inputWList">
 
@@ -63,7 +66,7 @@ function BuildList(){
                             </form>
                         
                             
-                                <ul>
+                                <ul className="taskUL">
                                     
                                         {todos.map(task => (
                                             <li key={task.id}>
