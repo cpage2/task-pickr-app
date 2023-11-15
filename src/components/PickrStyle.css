@@ -11,6 +11,7 @@ button{
 
 button>span{
     letter-spacing: 2px;
+    color: white;
 
 }
 
@@ -19,6 +20,7 @@ button>span{
     font-size: 28px;
     font-weight: 500;
     float: left;
+    color: white;
 }
 
 .pickedTaskBox{
