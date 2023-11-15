@@ -4,12 +4,7 @@ import logo from "./components/assets/LogoW.png";
 import BuildList from "./components/BuildList.js";
 
 
-
-
 function TPMain (){
-
-   
-
 
     return(
         
@@ -23,17 +18,9 @@ function TPMain (){
             </div>
         </div>
         <footer></footer>
-        
          
-        
-       
-                   
-
-            
-    </>);
-
-    
-
+        </>
+    );
 
 }
 
