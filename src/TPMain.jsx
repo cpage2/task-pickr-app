@@ -14,7 +14,7 @@ function TPMain (){
     return(
         
         <>
-        <div id="logo"><img src={logo} style={{width: '175px'}} alt = "Task Pickr" /></div>
+        <div id="logo"><img src={logo} style={{width: '150px'}} alt = "Task Pickr" /></div>
         
         <div className="container text-center">
             <div className="row">
