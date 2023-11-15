@@ -4,7 +4,7 @@ body{
   background: linear-gradient(
     to bottom,
     #2d2d2d 0%,
-    #2d2d2d 90%,
+    #2d2d2d 93%,
     white 20%,
     white 100%
   );
@@ -39,19 +39,20 @@ body{
 }
 
 .col{
-  width: 410px;
+  
 }
 
-footer{
-  margin-top: auto;
-  background-image: url("./components/assets/DiagnolBoxes.png");
-  background-size: 175%;
-  background-repeat: repeat-x;
-  background-position: bottom;
+.footer{
   position: fixed;
-  
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 50%;
+  background-image: url("./components/assets/DiagnolBoxes.png");
+  background-repeat: no-repeat;
+  background-size: 190%;
+  background-position-x: 20%;
+  height: 25%;
+  text-align: center;
 
 }
 
@@ -60,14 +61,56 @@ footer{
 
 
 /* Mobile */
-@media(min-width: 1000px) {
-  
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .footer{
+    background-size: 250%;
+  }
 
    
 }
 
-@media(min-width:800px) and (max-width: 992px) {
+@media(min-width:800px) and (max-width: 1300px) {
+  body{
+    background: linear-gradient(
+      to bottom,
+      #2d2d2d 0%,
+      #2d2d2d 96%,
+      white 20%,
+      white 100%
+    );
+   
+  }
   
+
+  .row{
+    text-align: -webkit-center;
+  }
+
+  .tasks{
+    width: 600px;
+  }
+
+  .col-sm{
+    margin-bottom: 20px;
+  }
+
+  button{
+    margin-bottom: 50px;
+    
+  }
+  .pickedContainer{
+    width: 400px;
+  }
+
+  .pickedTaskBox {
+    margin: 0 auto;
+  }
+
+ 
+  .footer{
+    height:13%;
+    background-size: 250%;
+  }
 
 }
 

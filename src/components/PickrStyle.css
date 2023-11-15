@@ -1,3 +1,7 @@
+.w-100{
+    display: none;
+}
+
 button{
     background-color:#edbd00;
     border: none;
@@ -5,7 +9,7 @@ button{
     font-size: 25px;
     font-weight: 500;
     box-shadow: rgba(0, 0, 0, 0.211) 5px 5px 7px;
-    margin-top: 20%;
+    margin-top: 30%;
     border-radius: 5px;
 }
 
@@ -25,12 +29,12 @@ button>span{
 
 .pickedTaskBox{
     background-color: rgba(86, 86, 86, 0.85);
-    margin-top: 45px;
+    margin-top: 30px;
     width: 400px;
     border-radius: 10px;
     padding: 20px;
     height: 70px;
-    box-shadow: 5px 5px 10px rgba(86, 86, 86, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
    
 
 }
@@ -44,3 +48,18 @@ button>span{
     margin-right: 10px;
 }
 
+@media(min-width:800px) and (max-width: 1300px){
+   
+    .w-100{
+        display: block;
+    }
+    
+    button{
+        margin-top: 10%;
+    }
+
+    .pickedContainer{
+        margin-bottom: 20%;
+    }
+
+}

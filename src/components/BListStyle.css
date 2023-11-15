@@ -27,11 +27,11 @@
 
 .inputWList{
   background-color: rgba(91, 91, 91, 0.85);
-  margin-top: 45px;
-  width: 400px;
+  margin-top: 30px;
+  min-width: 415px;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 5px 5px 10px rgba(86, 86, 86, 0.5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-control{
@@ -104,4 +104,12 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media(min-width:800px) and (max-width: 1300px){
+  .inputWList{
+    max-width: 600px;
+  }
+
+  
 }

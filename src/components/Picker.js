@@ -24,17 +24,26 @@ function Picker(prop){
 
     return(
         <>
+        <div class="w-100"></div>
+        <div className="col-sm"><button onClick={pickTask}><span>PICK</span></button></div>
+        <div class="w-100"></div>
+        <div className="col-sm">
+                <div className="pickedContainer">
+                    <div id="pickrHeader"><p>Let's Start With:</p></div>
+                    <br></br>
+                        <div className="pickedTaskBox">
+                            <span id="pickedItem">
+                            <img src={LiImage} style={{width:"10px"}} alt="bullet point"/>{pick}
+                            </span>
+                    
+                    </div>
 
-        <div className="col"><button onClick={pickTask}><span>PICK</span></button></div>
-        <div className="col">
-            <div id="pickrHeader"><p>Let's Start With:</p></div>
-                <div className="pickedTaskBox">
-                    <span id="pickedItem">
-                    <img src={LiImage} style={{width:"10px"}} alt="bullet point"/>{pick}
-                    </span>
-               
                 </div>
+               
 
+
+           
+            
         </div>
           
         

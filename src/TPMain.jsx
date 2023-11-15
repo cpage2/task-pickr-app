@@ -12,12 +12,12 @@ function TPMain (){
     
         <div id="logo"><img src={logo} style={{width: '160px'}} alt = "Task Pickr" /></div>
         
-        <div className="container text-center">
-            <div className="row">
+        <div className="container">
+            <div className="row justify-content-md-center">
                 <BuildList/>     
             </div>
         </div>
-        <footer></footer>
+        <div className="footer"></div>
          
         </>
     );
