@@ -7,6 +7,7 @@ import Pickr from "./Picker.js";
 
 function BuildList(){
 
+    const {v4 : uuidv4} = require('uuid');
     const [input, setInput] = useState("");
     const [todos, setTodos] = useState([]);
    
@@ -18,8 +19,8 @@ function BuildList(){
         
         setTodos([
             ...todos,
-           // Change id because duplicates can happen
-            {   id: "TD1" + Math.floor(Math.random()*100),
+          
+            {   id: uuidv4(),
                 text: input          
             } 
         ]);

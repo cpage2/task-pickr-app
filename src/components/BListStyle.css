@@ -1,11 +1,12 @@
 .col{
-    margin-top: 20pt;
+    margin-top: 30px;
 }
 
 
 .taskName{
   float: left;
   font-size: 28px;
+  font-weight: 500;
   
 }
 
@@ -24,11 +25,12 @@
 }
 
 .inputWList{
-  background-color: rgba(86, 86, 86, 0.747);
+  background-color: rgba(91, 91, 91, 0.85);
   margin-top: 45px;
   width: 400px;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 5px 5px 10px rgba(86, 86, 86, 0.5);
 }
 
 .form-control{

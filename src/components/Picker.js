@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import LiImage from "./assets/LiBox.png";
 import "./PickrStyle.css";
 
 function Picker(prop){
@@ -28,8 +29,10 @@ function Picker(prop){
         <div className="col">
             <div id="pickrHeader"><p>Let's Start With:</p></div>
                 <div className="pickedTaskBox">
-                    <p>{pick}</p>
-                    
+                    <span id="pickedItem">
+                    <img src={LiImage} style={{width:"10px"}} alt="bullet point"/>{pick}
+                    </span>
+               
                 </div>
 
         </div>

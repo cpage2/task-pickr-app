@@ -1,19 +1,23 @@
 
 body{
-  background-image: url("/src/components/assets/Pencil\ pattern.png");
+  /* background-image: url("/src/components/assets/Pencil\ pattern.png");
   background-repeat: no-repeat;
-  background-size: 200%;
+  background-size: 150%; */
     
 }
 
 .row{
-  margin-top: 20px;
+  margin-top: 3%;
   display: flex;
 }
 
 #logo{
     margin-top: 10pt;
     margin-left: 10pt;
+}
+
+.col{
+  width: 410px;
 }
 
 
