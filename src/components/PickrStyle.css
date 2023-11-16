@@ -60,26 +60,21 @@ button>span{
 
     .pickedContainer{
         max-width: 400px;
-       
+        padding-top: 10%;
+
     }
 
 }
 
-@media screen and (max-width: 800px){
-    .pickedContainer{
-        margin-top:10%;
-    }
-}
 
 
 @media screen and (max-width: 500px){
     .pickedTaskBox{
         max-width:250px;
-        margin-top:15px;
+        margin-top:20px;
     }
     .pickedContainer{
-        max-width: 250px;
-       
+        max-width: 250px; 
     }
 
     #pickrHeader{
@@ -96,6 +91,7 @@ button>span{
         padding: 8px 25px;
         font-size: 20px;
         font-weight: 500;
+        margin-top:15%;
         
        
     }

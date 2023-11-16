@@ -19,6 +19,7 @@ body{
 .body-container{
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .row{
@@ -47,9 +48,9 @@ body{
   width: 100%;
   background-image: url("./components/assets/DiagnolBoxes.png");
   background-repeat: no-repeat;
-  background-size: 190%;
+  background-size: 200%;
   background-position-x: 20%;
-  height: 250px;
+  height: 200px;
   text-align: center;
 
 }
@@ -127,14 +128,13 @@ body{
  
   .row{
     text-align: -webkit-center;
+    margin:0 auto;
   }
    .footer{
 
     background-size: 250%;
     height:140px;
-   
-   
-    
+ 
   }
 
 
@@ -142,6 +142,23 @@ body{
 }
 
 @media(max-width:600px){
+  body{
+    background: linear-gradient(
+      to bottom,
+      #2d2d2d 0%,
+      #2d2d2d 97.5%,
+      white 20%,
+      white 100%
+    );
+   
+  }
+  .footer{
+
+    background-size: 300%;
+    height:80px;
+ 
+  }
+  
 
 }
 

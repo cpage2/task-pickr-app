@@ -28,7 +28,7 @@
 .inputWList{
   background-color: rgba(91, 91, 91, 0.85);
   margin-top: 30px;
-  min-width: 415px;
+  width: 415px;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -106,3 +106,55 @@
   transform: rotate(45deg);
 }
 
+
+
+@media screen and (max-width:999px){
+  .tasks{
+    width: 450px;
+  }
+  .inputWList{
+    width:450px;
+    margin-top:15%;
+    
+  } 
+  .taskName{
+    padding-top: 10%;
+   
+    
+  }
+}
+
+
+@media screen and (max-width:600px){
+  .tasks{
+    width: 340px;
+  }
+  .inputWList{
+    width:340px;
+    margin-top:12%;
+    
+  }
+
+  .inputWList li{
+    font-size: 14px;
+   
+  }
+
+  .taskName{
+    padding-top: 7%;
+    font-size: 22px;
+    
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .tasks{
+    width: 300px;
+  }
+  .inputWList{
+    width:300px;
+    margin-top:12%;
+    
+  }
+}
