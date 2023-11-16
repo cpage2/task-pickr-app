@@ -106,10 +106,3 @@
   transform: rotate(45deg);
 }
 
-@media(min-width:800px) and (max-width: 1300px){
-  .inputWList{
-    max-width: 600px;
-  }
-
-  
-}

@@ -9,15 +9,25 @@ function TPMain (){
     return(
         
         <>
-    
-        <div id="logo"><img src={logo} style={{width: '160px'}} alt = "Task Pickr" /></div>
-        
-        <div className="container">
-            <div className="row justify-content-md-center">
-                <BuildList/>     
+        <div className="body-container">
+            <div id="content-wrap">
+                    <div id="logo"><img src={logo} style={{width: '160px'}} alt = "Task Pickr" /></div>
+                    
+                    <div className="container">
+                        <div className="row justify-content-md-center">
+                            <BuildList/>     
+                        </div>
+                    </div>
+                    
+                    <div className="footer"></div>
+
+
             </div>
+           
+
         </div>
-        <div className="footer"></div>
+    
+       
          
         </>
     );

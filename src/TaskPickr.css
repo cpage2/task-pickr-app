@@ -8,16 +8,18 @@ body{
     white 20%,
     white 100%
   );
-
+  min-height: 100vh;
   background-repeat: no-repeat;
-  min-height: 100lvh;
   width: 100%;
   display: flex;
   flex-direction: column;
   
     
 }
-
+.body-container{
+  position: relative;
+  min-height: 100vh;
+}
 
 .row{
   margin-top: 5%;
@@ -38,22 +40,22 @@ body{
    
 }
 
-.col{
-  
-}
 
 .footer{
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-image: url("./components/assets/DiagnolBoxes.png");
   background-repeat: no-repeat;
   background-size: 190%;
   background-position-x: 20%;
-  height: 25%;
+  height: 250px;
   text-align: center;
 
+}
+
+#content-wrap{
+  padding-bottom: 250px;
 }
 
 
@@ -61,15 +63,8 @@ body{
 
 
 /* Mobile */
-@media (min-width: 1300px) and (max-width: 1700px) {
-  .footer{
-    background-size: 250%;
-  }
 
-   
-}
-
-@media(min-width:800px) and (max-width: 1300px) {
+@media screen and (max-width: 1300px) and (min-width: 1000px){
   body{
     background: linear-gradient(
       to bottom,
@@ -100,26 +95,53 @@ body{
   }
   .pickedContainer{
     width: 400px;
+    margin-bottom: 200px;
+    
   }
 
   .pickedTaskBox {
     margin: 0 auto;
   }
 
- 
   .footer{
-    height:13%;
     background-size: 250%;
+    height:170px;
   }
 
+ 
+
+
 }
 
-@media(max-width: 700px) {
+@media screen and (max-width:999px) {
+  body{
+    background: linear-gradient(
+      to bottom,
+      #2d2d2d 0%,
+      #2d2d2d 96%,
+      white 20%,
+      white 100%
+    );
+   
+  }
+ 
+  .row{
+    text-align: -webkit-center;
+  }
+   .footer{
+
+    background-size: 250%;
+    height:140px;
+   
+   
+    
+  }
+
 
    
 }
 
-@media(max-width: 400px) {
-  
-   
+@media(max-width:600px){
+
 }
+

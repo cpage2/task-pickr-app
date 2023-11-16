@@ -48,7 +48,7 @@ button>span{
     margin-right: 10px;
 }
 
-@media(min-width:800px) and (max-width: 1300px){
+@media screen  and (max-width: 1300px){
    
     .w-100{
         display: block;
@@ -59,7 +59,46 @@ button>span{
     }
 
     .pickedContainer{
-        margin-bottom: 20%;
+        max-width: 400px;
+       
     }
 
 }
+
+@media screen and (max-width: 800px){
+    .pickedContainer{
+        margin-top:10%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .pickedTaskBox{
+        max-width:250px;
+        margin-top:15px;
+    }
+    .pickedContainer{
+        max-width: 250px;
+       
+    }
+
+    #pickrHeader{
+        font-size: 22px;
+       
+    }
+
+    #pickedItem{
+        font-size: 14px;
+    }
+
+    button{
+
+        padding: 8px 25px;
+        font-size: 20px;
+        font-weight: 500;
+        
+       
+    }
+
+}
+
