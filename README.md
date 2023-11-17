@@ -7,7 +7,7 @@ React, Bootstrap, HTML/CSS
 ## Images
 
 Current Design
-![Alt text](src/components/assets/DiagnolBoxes.png)
+![Alt text](src/components/assets/TP.PNG)
 
 Old Design
 ![Alt text](<src/components/assets/Bubbles Theme.PNG>)
