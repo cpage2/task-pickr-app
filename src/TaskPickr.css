@@ -141,7 +141,7 @@ body{
    
 }
 
-@media(max-width:600px){
+@media screen and (max-width:670px){
   body{
     background: linear-gradient(
       to bottom,
@@ -154,8 +154,29 @@ body{
   }
   .footer{
 
-    background-size: 300%;
-    height:80px;
+    background-size: 250%;
+    height:97px;
+ 
+  }
+  
+
+}
+
+@media screen and (max-width:500px){
+  body{
+    background: linear-gradient(
+      to bottom,
+      #2d2d2d 0%,
+      #2d2d2d 98%,
+      white 20%,
+      white 100%
+    );
+   
+  }
+  .footer{
+
+    background-size: 275%;
+    height:65px;
  
   }
   

@@ -15,6 +15,7 @@
   list-style: none;
   color: white;
   margin-bottom:5px;
+  font-size: 16px;
  
 }
 
@@ -122,6 +123,17 @@
    
     
   }
+
+  .checkmark{
+    width: 20px;
+    height: 20px;
+    border: 3px solid #edbd00;
+  }
+  .inputWList li img{
+    width: 17px !important;
+   
+  
+}
 }
 
 
@@ -136,7 +148,8 @@
   }
 
   .inputWList li{
-    font-size: 14px;
+  
+    padding-bottom: 2%;
    
   }
 
@@ -148,13 +161,26 @@
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width:400px){
   .tasks{
     width: 300px;
   }
   .inputWList{
     width:300px;
-    margin-top:12%;
+    margin-top:17%;
     
   }
+
+  .inputWList li{
+    font-size: 14px;
+    padding-bottom: 2%;
+   
+  }
+
+  .taskName{
+    padding-top: 12%;
+    
+  }
+
 }
+
